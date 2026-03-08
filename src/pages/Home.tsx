@@ -1,4 +1,4 @@
-import { TreePine, AlertTriangle, Users, Factory, GraduationCap } from 'lucide-react';
+import { TreePine, Factory } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import MenuButton from '../components/MenuButton';
 import heroImage from '../assets/hero-mexico.jpg';
@@ -12,7 +12,7 @@ const Home = () => {
     <div className={styles.container}>
       <img src={heroImage} alt="Paisaje mexicano" className={styles.heroImage} />
 
-      {/* BOTON AUTOR ARRIBA */}
+      {/* BOTON AUTOR */}
       <div className={styles.authorButton} onClick={() => navigate("/autor")}>
         👤 Alan Sauriel
       </div>
@@ -23,52 +23,29 @@ const Home = () => {
       </header>
 
       <div className={styles.menuGrid}>
-        <div className={styles.menuColumn}>
-          <MenuButton
-            label="Recursos Naturales"
-            to="/recursos-naturales"
-            icon={<TreePine size={22} />}
-            color="green"
-          />
 
-          <MenuButton
-            label="Problemas Ambientales"
-            to="/recursos-naturales#problemas"
-            icon={<AlertTriangle size={22} />}
-            color="red"
-          />
-
-          <MenuButton
-            label="Población"
-            to="/recursos-naturales#poblacion"
-            icon={<Users size={22} />}
-            color="teal"
-          />
-        </div>
+        <MenuButton
+          label="Recursos Naturales"
+          to="/recursos-naturales"
+          icon={<TreePine size={22} />}
+          color="green"
+        />
 
         <div className={styles.centerBadge}>
-  <span className={styles.globeEmoji}>🌎</span>
+          <span className={styles.globeEmoji}>🌎</span>
 
-  <div className={styles.planetTooltip}>
-    México posee una gran diversidad de recursos naturales
-  </div>
-</div>
-
-        <div className={styles.menuColumn}>
-          <MenuButton
-            label="Sectores Económicos"
-            to="/sectores-economicos"
-            icon={<Factory size={22} />}
-            color="orange"
-          />
-
-          <MenuButton
-            label="Educación"
-            to="/sectores-economicos#educacion"
-            icon={<GraduationCap size={22} />}
-            color="yellow"
-          />
+          <div className={styles.planetTooltip}>
+            México posee una gran diversidad de recursos naturales
+          </div>
         </div>
+
+        <MenuButton
+          label="Sectores Económicos"
+          to="/sectores-economicos"
+          icon={<Factory size={22} />}
+          color="orange"
+        />
+
       </div>
 
       <footer className={styles.footer}>
