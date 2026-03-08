@@ -1,9 +1,16 @@
 import TopicCard from "../components/TopicCard";
 import styles from "../styles/PageLayout.module.css";
 
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+
 const SectoresEconomicos = () => {
   return (
-    <div className={styles.page}>
+      <div className={styles.page}>
+
+      <Link to="/" className={styles.backLink}>
+      <ArrowLeft size={18} /> Volver al menú
+      </Link>
 
       <div className={styles.header}>
         <h1 className={styles.orangeTitle}>2. Sectores Económicos</h1>
