@@ -1,0 +1,156 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem 1.6rem;
+  border-radius: var(--radius);
+  border: none;
+
+  cursor: pointer;
+
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  color: #fff;
+  min-width: 240px;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 15px var(--color-shadow);
+}
+
+/* brillo que atraviesa el botón */
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.2),
+    transparent
+  );
+
+  transition: left 0.6s ease;
+}
+
+.button:hover::before {
+  left: 100%;
+}
+
+/* animación hover */
+
+.button:hover {
+  transform: scale(1.06) translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  filter: brightness(1.08);
+}
+
+/* click */
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* icono */
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.2);
+
+  flex-shrink: 0;
+
+  transition: transform 0.3s ease;
+}
+
+.button:hover .icon {
+  transform: rotate(8deg) scale(1.1);
+}
+
+.green {
+  background: linear-gradient(
+    135deg,
+    var(--color-green),
+    var(--color-green-dark)
+  );
+}
+
+.blue {
+  background: linear-gradient(
+    135deg,
+    var(--color-blue),
+    var(--color-blue-dark)
+  );
+}
+
+.orange {
+  background: linear-gradient(
+    135deg,
+    var(--color-orange),
+    var(--color-orange-dark)
+  );
+}
+
+.yellow {
+  background: linear-gradient(
+    135deg,
+    var(--color-yellow-dark),
+    var(--color-orange)
+  );
+}
+
+.teal {
+  background: linear-gradient(
+    135deg,
+    #00897b,
+    #004d40
+  );
+}
+
+.indigo {
+  background: linear-gradient(
+    135deg,
+    #3949ab,
+    #1a237e
+  );
+}
+
+.red {
+  background: linear-gradient(
+    135deg,
+    #c62828,
+    #b71c1c
+  );
+}
+
+@media (max-width: 768px) {
+  .button {
+    min-width: 220px;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+}

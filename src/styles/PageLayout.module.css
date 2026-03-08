@@ -1,0 +1,68 @@
+.page {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.banner {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.header {
+  padding: 2rem 2rem 0;
+  max-width: 960px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.header p {
+  color: var(--color-text-light);
+  font-size: 1.05rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 2rem 0;
+  max-width: 960px;
+  border-radius: 8px;
+  background: var(--color-card-bg);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  transition: background var(--transition);
+  cursor: pointer;
+}
+
+.backLink:hover {
+  background: #f0ede4;
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.greenTitle { color: var(--color-green-dark); }
+.blueTitle { color: var(--color-blue-dark); }
+.orangeTitle { color: var(--color-orange-dark); }
+
+@media (max-width: 768px) {
+  .banner { height: 180px; }
+  .header h1 { font-size: 1.6rem; }
+  .content { padding: 1rem 1rem 2rem; }
+}
