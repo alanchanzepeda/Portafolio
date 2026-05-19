@@ -1,4 +1,4 @@
-import { TreePine, Factory } from 'lucide-react';
+import { TreePine, Factory, Globe2, Landmark } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import MenuButton from '../components/MenuButton';
 import heroImage from '../assets/hero-mexico.jpg';
@@ -44,6 +44,20 @@ const Home = () => {
           to="/sectores-economicos"
           icon={<Factory size={22} />}
           color="orange"
+        />
+
+        <MenuButton
+          label="3era Subcompetencia"
+          to="/subcompetencia-3"
+          icon={<Globe2 size={22} />}
+          color="blue"
+        />
+
+        <MenuButton
+          label="4ta Subcompetencia"
+          to="/subcompetencia-4"
+          icon={<Landmark size={22} />}
+          color="purple"
         />
 
       </div>
